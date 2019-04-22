@@ -10,36 +10,24 @@ namespace HomeWork2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ввдите число a ");
-            var s = Console.ReadLine();
-            double a = double.Parse(s);
+            Console.WriteLine("Enter the number a ");
+            var num = Console.ReadLine();
+            double first = double.Parse(num);
+            Console.WriteLine();
 
-            Console.WriteLine("Введите число b ");
-            var g = Console.ReadLine();
-            double b = double.Parse(g);
+            Console.WriteLine("Enter the number b ");
+            var snum = Console.ReadLine();
+            double second = double.Parse(snum);
+            Console.WriteLine();
 
-                var c = a + b;
-                Console.WriteLine();
-                Console.WriteLine("Сумма чисел a и b = " + c);
-                Console.WriteLine();
-
-                var n = a - b;
-                Console.WriteLine("Разница чисел a и b = " + n);
-                Console.WriteLine();
-
-                var m = a * b;
-                Console.WriteLine("Произведение чисел a и b =" + m);
-             Console.WriteLine();
-
+            var result1 = first + second;
+            var result2 = first - second;
+            var result3 = first * second;
+            Console.WriteLine();
+            Console.WriteLine("Plus\tMinus\tMultiplication");
+            Console.WriteLine("{0}\t{1}\t{2}", result1, result2, result3);
+            Console.WriteLine();
         }
 
-        private static object parse(string p)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static int a { get; set; }
-
-        public static int b { get; set; }
     }
 }
