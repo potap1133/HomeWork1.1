@@ -6,10 +6,9 @@ namespace HomeWork2._2
     {
         static void Main(string[] args)
         {
-            bool cnum;
+            string cnum;
             string num;
             string snam;
-            string inum;
             double First;
             double Second;
             double result;
@@ -25,35 +24,69 @@ namespace HomeWork2._2
             Console.WriteLine();
 
             Console.WriteLine("Выберите тип операции +,-,*,/,%,^ ");
-            inum = Console.ReadLine();
-            cnum = bool.Parse(inum);
-            Console.WriteLine();
-                        
-            if (cnum == + ) 
+            cnum = Console.ReadLine();
+            switch (cnum)
             {
-            
-                result = First + Second;
-                   Console.WriteLine(result);
-            }            
 
-            else if (cnum == - )
+                case "+":
+
+                    result = First + Second;
+                    Console.WriteLine(result);
+                    break;
+
+                case "-":
+
+                    result = First - Second;
+                    Console.WriteLine(result);
+
+                    break;
+                case "*":
+
+                    result = First * Second;
+                    Console.WriteLine(result);
+
+                    break;
+                case "/":
+
+                    result = First / Second;
+                    Console.WriteLine(result);
+
+                    break;
+                case "%":
+
+                    result = First % Second;
+                    Console.WriteLine(result);
+
+                    break;
+                
+                /*case "^":
+
+                    result = First ^ Second;
+                    Console.WriteLine(result);
+
+                    break;*/
+            }
+
+           /*}            
+
+            else if (cnum = - )
             {
                 result = First - Second;
                  Console.WriteLine(result);
             }
             
-            else if (cnum == * )
+            else if (cnum = * )
             {
                 result = First * Second;
                  Console.WriteLine(result);
             }
 
-            else if (cnum == / )
+            else if (cnum = / )
             {
                 result = First / Second;
                  Console.WriteLine(result);
-            }
-                       
+            }*/
+                                   
             }
 
         }
