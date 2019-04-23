@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeWork2._2
 {
@@ -10,27 +6,54 @@ namespace HomeWork2._2
     {
         static void Main(string[] args)
         {
+            bool cnum;
+            string num;
+            string snam;
+            string inum;
+            double First;
+            double Second;
+            double result;
+                                
             Console.WriteLine("Введите число a ");
-            var n = Console.ReadLine();
-            double a = double.Parse(n);
+            num = Console.ReadLine();
+            First = double.Parse(num);
             Console.WriteLine();
-         
+
             Console.WriteLine("Введите число b ");
-            var m = Console.ReadLine();
-            double b = double.Parse(m);
+            snam = Console.ReadLine();
+            Second = double.Parse(snam);
             Console.WriteLine();
-         
-           
-            Console.WriteLine("Выберите тип операции +,-,*,/,|/|,^ ");
-            var h = Console.ReadLine(); 
-            double g = double.Parse(h);
+
+            Console.WriteLine("Выберите тип операции +,-,*,/,%,^ ");
+            inum = Console.ReadLine();
+            cnum = bool.Parse(inum);
             Console.WriteLine();
-         
-           
-            /*if (g == +)
+                        
+            if (cnum == + ) 
             {
-            var s = a + b;
-            Console.WriteLine(s);*/
+            
+                result = First + Second;
+                   Console.WriteLine(result);
+            }            
+
+            else if (cnum == - )
+            {
+                result = First - Second;
+                 Console.WriteLine(result);
+            }
+            
+            else if (cnum == * )
+            {
+                result = First * Second;
+                 Console.WriteLine(result);
+            }
+
+            else if (cnum == / )
+            {
+                result = First / Second;
+                 Console.WriteLine(result);
+            }
+                       
             }
 
         }
