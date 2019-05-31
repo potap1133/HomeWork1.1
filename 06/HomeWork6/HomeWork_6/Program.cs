@@ -6,38 +6,69 @@ namespace HomeWork_6
     {
         static void Main(string[] args)
         {
-            double num;
-            double num1 = 0;
-            short num2;
-
-            Console.WriteLine(" Enter a positive positive natural number not exceeding 2 billion: ");
-
-            do
+            try
             {
-                try
-                {
-                    num = double.Parse(Console.ReadLine());
 
-                    num1 = num % 10;                    
-                    num2 =(short)(num1 % 2);
-                    num1 = (int)(num1 / 10);
+            var num = 0;
+            var num1 = 0;
+            var i = 0;
+           
+            Console.WriteLine(" Enter a positive positive natural number not exceeding 2 billion: ");
+                num = int.Parse(Console.ReadLine());
 
-
-                    if (num2 == 0)
+                while (true)
                     {
-                        Console.WriteLine(num1);
+
+                    if (num < 0)
+                    {
+                        Console.WriteLine("Invalid value entered! Try again.");
+                        num = int.Parse(Console.ReadLine());
+                        continue;    
+
                     }
 
+                    if (num > 2000000)
+                    {
+                        Console.WriteLine("Invalid value entered! Try again.");
+                        num = int.Parse(Console.ReadLine());
+                        continue;
+                    }
 
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine();
-                }
+                    num1 = num % 10;
 
-            } while (true);
+                    if ((num1 % 2) == 0)
+                    {
+                        Console.WriteLine($"Even number:{num1} ");
+                        i++;
+                    }
+
+                    num = num / 10;
+
+                    if (num == 0)
+                    {
+                        Console.WriteLine($"Number of even numbers: { i}");
+                        break;
+                    }
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Try typing again");
+                
+            }
+
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("Try typing again");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Try typing again");
+            }
+
+            Console.ReadKey();
+
             
-
 
 
 
