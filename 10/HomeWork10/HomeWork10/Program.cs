@@ -10,16 +10,26 @@ namespace HomeWork10
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your name : ");
-            var nameFist = Console.ReadLine();
-            Console.WriteLine("Enter your age :");
-            int yearsFist = int.Parse(Console.ReadLine());
+            var i = 0;
+            while(i < 3)
+            {
+                string nameFist ;
+                int yearsFist = 0;
 
-            Man num = new Man() { Name = nameFist, Age = yearsFist };
-           
-                       
-            Console.WriteLine($"{num.Name}, {num.Age} ");
-            Console.ReadKey();
+                Console.WriteLine("Enter your name : ");
+                nameFist = Console.ReadLine();
+                Console.WriteLine("Enter your age :");
+                yearsFist = int.Parse(Console.ReadLine());
+
+                Man num = new Man() { Name = nameFist, Age = yearsFist };
+
+
+                Console.WriteLine($"  {num.Name}, {yearsFist}, {num.Age} ");
+                Console.ReadKey();
+                i++;
+            }
+            
+            
         }
     }
 }
