@@ -10,24 +10,51 @@ namespace HomeWork10
     {
         static void Main(string[] args)
         {
-            var i = 0;
-            while(i < 3)
+            
+            Console.WriteLine("Enter your name : ");
+            var nameFist = Console.ReadLine();
+            Console.WriteLine("Enter your age :");
+            var yearsFist = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter your name : ");
+            var nameSecond = Console.ReadLine();
+            Console.WriteLine("Enter your age :");
+            var yearsSecond = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter your name : ");
+            var nameThird = Console.ReadLine();
+            Console.WriteLine("Enter your age :");
+            var yearsThird = int.Parse(Console.ReadLine());
+
+
+
+            Man num = new Man()
             {
-                string nameFist ;
-                int yearsFist = 0;
+                Name = nameFist,
+                Name1 = nameSecond,
+                Name2 = nameThird                
+            };
 
-                Console.WriteLine("Enter your name : ");
-                nameFist = Console.ReadLine();
-                Console.WriteLine("Enter your age :");
-                yearsFist = int.Parse(Console.ReadLine());
+            Man num1 = new Man()
+            {
+                Age = yearsFist,
+                Age1 = yearsSecond,
+                Age2 = yearsThird,
+            };
 
-                Man num = new Man() { Name = nameFist, Age = yearsFist };
-
-
-                Console.WriteLine($"  {num.Name}, {yearsFist}, {num.Age} ");
-                Console.ReadKey();
-                i++;
+            for (int i = 0; i <  3; i++)
+            {
+                Console.WriteLine($"  {num.Name[i]}, {num1.Age[i]} ");
             }
+
+
+
+
+
+                
+                Console.ReadKey();
+
+            
             
             
         }
